@@ -1,9 +1,10 @@
 
 # arcade
 
-This project is a C++ program whose goal was to be able to play retro games like Pac Man, or Snake while being able to dynamically switch graphic library during a game.
-The Program currently supports 4 games : Snake, Nibbler, Pac-Man and Solar Fox, and 4 graphic libraries : SDL2, SFML and Ncurses
-
+This project is a C++ program whose goal was to be able to simulate the impact of light on primitives like sphere, cones, cylinders or planes. The lighting was made using the phong model.
+The scene is made with a configuration file that specifies the rotation, position and color of each primitive.
+There is no implementation yet of multithreading so the program might be slow.
+Expect at least 40 seconds of loading
 
 ## Installation
 
@@ -32,6 +33,12 @@ In order to execute the binary, you have to pass as an argument the path to a sc
 # exemple : ./raytracer configuration.scene
 ```
 
+If you redirect the output to a file, it will automatically format it as a .ppm file
+```
+./raytracer [PATH]
+
+# exemple : ./raytracer configuration.scene > output.ppm
+```
 
 
 ## Authors
@@ -44,4 +51,4 @@ In order to execute the binary, you have to pass as an argument the path to a sc
 ## Screenshots
 
 ![Screenshot 1](./screenshots/sphere_pic1.png)
-![Screenshot 2](./screenshots/sphere_pic1.png)
+![Screenshot 2](./screenshots/sphere_pic2.png)
