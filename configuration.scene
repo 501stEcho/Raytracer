@@ -1,0 +1,52 @@
+# Configuration of the camera
+camera:
+{
+    resolution = { width = 1920; height = 1080; };
+    position = { x = 0; y = 0; z = 0; };
+    rotation = { x = 0; y = 0; z = 0; };
+    scale = { x = 1.0; y = 1.0; z = 1.0; };
+    fieldOfView = 90.0; # In degree
+    antiAlias = 1; # Number of rays per pixel
+};
+
+# Primitives in the scene
+primitives:
+{
+    # List of scenes
+    scenes = (
+    );
+
+    # List of spheres
+    spheres = (
+        { x = 0.0; y = 0.0; z = 8.0; r = 1.0; color = { r = 255; g = 0; b = 0; }; },
+        { x = -3.0; y = 3.0; z = 10.0; r = 2.5; color = { r = 220; g = 0; b = 220; }; }
+    );
+
+    # List of planes
+    planes = (
+        { axis = "y" ; position = -2.0; color = { r = 100; g = 100; b = 0; }; }
+    );
+
+    # List of cones
+    cones = (
+    );
+};
+
+# Light configuration
+lights:
+{
+    # List of point lights
+    ambient = (
+        { strength = 0.4; color = { r = 255; g = 255; b = 255; }; samples = 64; noises = 4}
+    );
+
+    # List of directional lights
+    directional = (
+        { strength = 0.6; direction = {x = 0.0; y = -3.0; z = 1.0}; color = { r = 0; g = 255; b = 0; }; },
+        { strength = 0.6; direction = { x = -1.0; y = -1.0; z = 0.0}; color = { r = 255; g = 0; b = 0; }; },
+        { strength = 0.6; direction = { x = -1.0; y = 0.0; z = 1.0}; color = { r = 0; g = 0; b = 255; }; }
+    );
+
+    point = (
+    );
+};
